@@ -1,6 +1,7 @@
 
 import 'package:calendar_timeline/calendar_timeline.dart';
 import 'package:flutter/material.dart';
+import 'package:todo/ui/home/tasks-list/task_Item.dart';
 
 class tasks_List extends StatelessWidget{
   @override
@@ -22,6 +23,12 @@ class tasks_List extends StatelessWidget{
          //   dayColor: Color(0xFF333A47),
             selectableDayPredicate: (date) => date.day != 23,
             locale: 'en_ISO',
+          ),
+          Expanded(
+            child: ListView.builder(itemBuilder: (_,index){
+              return TaskItem();
+            
+            },itemCount: 10,),
           )
         ],
       ),
