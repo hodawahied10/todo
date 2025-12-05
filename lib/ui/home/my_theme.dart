@@ -21,10 +21,35 @@ class MyTheme{
    elevation: 0,
    selectedIconTheme: IconThemeData(
      color: lightPrimary,
-     size: 36
+     size:36
    ),
       unselectedIconTheme: IconThemeData(
         color:lightGray,
+      )
+    ),
+    bottomSheetTheme: BottomSheetThemeData(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft:Radius.circular(18) ,
+          topRight: Radius.circular(18) ,
+        )
+      )
+    ),
+    textTheme: TextTheme(
+      headlineLarge: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: Colors.black
+      ),
+      headlineMedium: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+          color: Colors.black
+      )
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style:ElevatedButton.styleFrom(
+        backgroundColor: lightPrimary,
       )
     )
   );
